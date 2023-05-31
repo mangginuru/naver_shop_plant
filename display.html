@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>검색 결과</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .item-image{
+            width: 200px;
+            height: auto;
+        }
+    </style>
+    
+</head>
+
+<body>
+    <h1>검색 결과 {{item_len}}개</h1>
+
+    <div id="searchResults">
+        {% for item in search %}
+        <div>
+            <p id="text">{{item.title|safe}}</p>
+            <p><a href="{{ item.link }}" id="shop" target="_blank">쇼핑 바로가기</a></p>
+            <img src="{{ item.image }}" alt="{{ item.title }}" class="item-image">
+            <p>가격: {{ item.lprice }}</p>
+        </div>
+        {% endfor %}
+
+    </div>
+    
+    <script>
+        var text = document.getElementById("text").innerHTML;
+
+        // title 부분 <b> </b> 없애기
+        var removedTags = text.replace(/<b>.*?<\/b>/g, "");
+
+        // 태그 부분 없애기
+        document.getElementById("text").innerHTML = removedTags;
+    </script>
+</body>
+
+</html>
