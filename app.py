@@ -6,10 +6,6 @@ import json
 
 app = Flask(__name__)
 
-# with open("./static/images/Areca Palm.jpg", 'rb') as f:
-# 	image_bytes = f.read()
-# 	print(get_prediction(image_bytes=image_bytes))
-
 
 #HTML 렌더링
 @app.route('/')
