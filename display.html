@@ -29,16 +29,6 @@
         {% endfor %}
 
     </div>
-    
-    <script>
-        var text = document.getElementById("text").innerHTML;
-
-        // title 부분 <b> </b> 없애기
-        var removedTags = text.replace(/<b>.*?<\/b>/g, "");
-
-        // 태그 부분 없애기
-        document.getElementById("text").innerHTML = removedTags;
-    </script>
 </body>
 
 </html>
