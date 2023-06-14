@@ -1,9 +1,6 @@
 # naver_shop_plant
 
+### 네이버 쇼핑 API 테스트(웹서버)
 
-#### i wanted to add function(purchase plants by naver shopping) on flutter application
-
-
-
-#### word(areca palm) -> naver API -> searching plants -> response information
-#### -> json file -> display html
+### search.py를 통해 식물 검색하기 
+### 웹서버에서 식물을 검색한 후 display.html에서 화면 구현
